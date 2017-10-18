@@ -59,16 +59,17 @@ public class ElanCard: UIView {
         
         view.translatesAutoresizingMaskIntoConstraints = false
         let viewsDict = ["view": view]
-        addConstraints(NSLayoutConstraint.constraints(
+        self.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "V:|-0-[view]-0-|",
             options: [],
             metrics: nil,
             views: viewsDict))
-        addConstraints(NSLayoutConstraint.constraints(
+        self.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-0-[view]-0-|",
             options: [],
             metrics: nil,
             views: viewsDict))
+
     }
     
     public func updateLayout(){

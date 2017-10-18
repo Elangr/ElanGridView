@@ -9,6 +9,10 @@ import UIKit
 
 public typealias GridViewConstructor = (_ contentView: ElanCard) -> Void
 
+public protocol ElanGridViewDelegate: class{
+    func onTapCard(_ elanCard: ElanCard)
+}
+
 public class ElanGridView: UIScrollView {
     
     @IBInspectable var cellWidth: CGFloat = 0.0
@@ -23,6 +27,8 @@ public class ElanGridView: UIScrollView {
     
     private var nextRow: Int = 0
     private var nextColumn: Int = 0
+    
+    public weak var elanGridViewDelegate: ElanGridViewDelegate?
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -95,7 +101,11 @@ public class ElanGridView: UIScrollView {
         
         cellCard.row = UInt(self.nextRow)
         cellCard.column = UInt(self.nextColumn)
-       
+        
+        //Add Tap event
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapCard(_:)))
+        cellCard.addGestureRecognizer(tapGesture)
+        
         constructor(cellCard)
         self.contentView?.addSubview(cellCard)
         self.setNeedsLayout()
@@ -105,6 +115,15 @@ public class ElanGridView: UIScrollView {
             self.nextRow += 1
         } else {
             self.nextColumn += 1
+        }
+        
+    }
+    
+    @objc func onTapCard(_ sender:UITapGestureRecognizer){
+        
+        if elanGridViewDelegate != nil {
+            let cellCard = sender.view as! ElanCard
+            elanGridViewDelegate?.onTapCard(cellCard)
         }
         
     }
