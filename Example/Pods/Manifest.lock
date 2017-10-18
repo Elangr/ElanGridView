@@ -1,0 +1,16 @@
+PODS:
+  - ElanGridView (0.1.0)
+
+DEPENDENCIES:
+  - ElanGridView (from `../`)
+
+EXTERNAL SOURCES:
+  ElanGridView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ElanGridView: 7b30b66e31dd630ab09d757c1b8eee4433a4898e
+
+PODFILE CHECKSUM: a17cb9732116e5410f1b5bdac5d5927516951b1a
+
+COCOAPODS: 1.2.1

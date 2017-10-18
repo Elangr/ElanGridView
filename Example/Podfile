@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ElanGridView_Example' do
+  pod 'ElanGridView', :path => '../'
+
+  target 'ElanGridView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

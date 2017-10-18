@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06A90D4AD3C2EF638CC6B9A81BCD6D6A /* Pods-ElanGridView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFB24F16B2082A7A4DEBE140F999229 /* Pods-ElanGridView_Tests-dummy.m */; };
+		166356865E6823CB2BA1CCE5A4AD4476 /* ElanGridView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D36392FFFA99AEC93B13CF60C9751604 /* ElanGridView-dummy.m */; };
+		1B9D4E5F1C378099B3C960BDAC56535D /* ElanGridView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1B1004D9ACCD93997E8FFDFFFBB3CB /* ElanGridView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		377B5E4F1BE806A283C73A7BE6B446DA /* ElanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51E027A93447764CA114265F0A9DCF /* ElanCard.swift */; };
+		39DE968ED9DF9FDB761B0284D75AA1C5 /* Pods-ElanGridView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E04E52C6659CAD3AE38BE7109C750F /* Pods-ElanGridView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AD412EC6F4A1CE734C9272CC55D7360 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		6D1EE89227298E4036D263BCFF3F33B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		747D71D9B1655AC243DDF0006D4001C3 /* Pods-ElanGridView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D9F8105BF8C48569C69EEAEAFBDBEC /* Pods-ElanGridView_Example-dummy.m */; };
+		771F16390513EF2A4528733779D9E91E /* Pods-ElanGridView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01522AD5B8DC06BA095212112AD80654 /* Pods-ElanGridView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2A6795D399F275B404CDBE99787F575 /* ElanGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C0312C869BD69FF284B157533FD10 /* ElanGridView.swift */; };
+		EBA73C20F1D91F6C04E72AB39A622E50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB3ABE573D0468C31B75BDAA4E2A1983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01394C7A09CBCE2B09C9EE919BB736FE;
+			remoteInfo = ElanGridView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01522AD5B8DC06BA095212112AD80654 /* Pods-ElanGridView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ElanGridView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		04E04E52C6659CAD3AE38BE7109C750F /* Pods-ElanGridView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ElanGridView_Example-umbrella.h"; sourceTree = "<group>"; };
+		067754145FAE6C9EBAFA6FE857E5F9EB /* Pods-ElanGridView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElanGridView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0EB161B7A3694FE811208E08F3BF927B /* Pods-ElanGridView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElanGridView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		146474FE66045E28E9B3C52E82E143B1 /* Pods-ElanGridView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ElanGridView_Tests.modulemap"; sourceTree = "<group>"; };
+		319E3EB7FFD462B7D84BF7B9742D7311 /* Pods-ElanGridView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ElanGridView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		33A6321BA3AF55A47E4EA838337440CF /* Pods-ElanGridView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ElanGridView_Example.modulemap"; sourceTree = "<group>"; };
+		4AFB24F16B2082A7A4DEBE140F999229 /* Pods-ElanGridView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ElanGridView_Tests-dummy.m"; sourceTree = "<group>"; };
+		4F1E1300DF02E753362630F52972E798 /* ElanGridView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ElanGridView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		512C0312C869BD69FF284B157533FD10 /* ElanGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElanGridView.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C03FEA3B3FA7B75CC9EA0733F19109D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70503078FB4904A179A39578ADA6CDE5 /* Pods-ElanGridView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElanGridView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7945D09863DFBA53982E88A92B755419 /* Pods-ElanGridView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElanGridView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		83C991C4F73FB571EAA8A8299A592291 /* Pods_ElanGridView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElanGridView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96D9F8105BF8C48569C69EEAEAFBDBEC /* Pods-ElanGridView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ElanGridView_Example-dummy.m"; sourceTree = "<group>"; };
+		98028A7F540C1E0AA0726541978554B4 /* Pods-ElanGridView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ElanGridView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D739B454EBE27B37E7293863A7B82EC /* ElanGridView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ElanGridView-prefix.pch"; sourceTree = "<group>"; };
+		A3751CD5B6650C2577F56A4CB401B01A /* Pods-ElanGridView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElanGridView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B5BAAAD503207EEDFAFEE0FB062E24DC /* Pods-ElanGridView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ElanGridView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B5DB33CCCD6323B7B2E85FD353013D81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B62D938D3883AF84BE4A0AF6CA686A09 /* ElanGridView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ElanGridView.xcconfig; sourceTree = "<group>"; };
+		BB51E027A93447764CA114265F0A9DCF /* ElanCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElanCard.swift; sourceTree = "<group>"; };
+		C2BB7187AB5DE8BFF39807794200B24E /* Pods-ElanGridView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElanGridView_Example-resources.sh"; sourceTree = "<group>"; };
+		CD848EF420210934BCEB5098FE542969 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBB5F37C6F772227590B6198117079A /* Pods-ElanGridView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ElanGridView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D0CFA6D85023552D01991454EDBBDBAF /* Pods-ElanGridView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElanGridView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D36392FFFA99AEC93B13CF60C9751604 /* ElanGridView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ElanGridView-dummy.m"; sourceTree = "<group>"; };
+		DF16D1F67342A776C21D7E6BE403318A /* Pods-ElanGridView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElanGridView_Tests-resources.sh"; sourceTree = "<group>"; };
+		E6674CD8040D768FCB16E663B807F77D /* Pods_ElanGridView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElanGridView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1B1004D9ACCD93997E8FFDFFFBB3CB /* ElanGridView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ElanGridView-umbrella.h"; sourceTree = "<group>"; };
+		FAD96DF98BE15B29DFD25656C5563746 /* ElanGridView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ElanGridView.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CD7F6FD7F81B132F41939BDCF79C448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1EE89227298E4036D263BCFF3F33B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E00C2795D0307BDCB71100E15F6490E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA73C20F1D91F6C04E72AB39A622E50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E34F05F3C96FC558D90E32E74026E665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD412EC6F4A1CE734C9272CC55D7360 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		329340926A4F6755434E509C290E6073 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD96DF98BE15B29DFD25656C5563746 /* ElanGridView.modulemap */,
+				B62D938D3883AF84BE4A0AF6CA686A09 /* ElanGridView.xcconfig */,
+				D36392FFFA99AEC93B13CF60C9751604 /* ElanGridView-dummy.m */,
+				9D739B454EBE27B37E7293863A7B82EC /* ElanGridView-prefix.pch */,
+				EC1B1004D9ACCD93997E8FFDFFFBB3CB /* ElanGridView-umbrella.h */,
+				CD848EF420210934BCEB5098FE542969 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ElanGridView";
+			sourceTree = "<group>";
+		};
+		3CACCAB90A67D43A2717202B4DDDE0ED /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C569A5215C0D5E6FE27770B659F47020 /* ElanGridView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5CA9B49C4D1B76C220414D5C3F4AD721 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F1E1300DF02E753362630F52972E798 /* ElanGridView.framework */,
+				83C991C4F73FB571EAA8A8299A592291 /* Pods_ElanGridView_Example.framework */,
+				E6674CD8040D768FCB16E663B807F77D /* Pods_ElanGridView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3CACCAB90A67D43A2717202B4DDDE0ED /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				5CA9B49C4D1B76C220414D5C3F4AD721 /* Products */,
+				A0758832E136E21F2AA71A326950B75B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		93CC77C949627952C0CE4D9D25E6DA08 /* ElanGridView */ = {
+			isa = PBXGroup;
+			children = (
+				DF39457BFC52582D7C2125EBE63D7D1A /* Classes */,
+			);
+			path = ElanGridView;
+			sourceTree = "<group>";
+		};
+		A0758832E136E21F2AA71A326950B75B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC68E93E37CEF0748C9BCA5B335B6795 /* Pods-ElanGridView_Example */,
+				C2B1A851B42E8ED3B950D4C591B67F81 /* Pods-ElanGridView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC68E93E37CEF0748C9BCA5B335B6795 /* Pods-ElanGridView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6C03FEA3B3FA7B75CC9EA0733F19109D /* Info.plist */,
+				33A6321BA3AF55A47E4EA838337440CF /* Pods-ElanGridView_Example.modulemap */,
+				B5BAAAD503207EEDFAFEE0FB062E24DC /* Pods-ElanGridView_Example-acknowledgements.markdown */,
+				CEBB5F37C6F772227590B6198117079A /* Pods-ElanGridView_Example-acknowledgements.plist */,
+				96D9F8105BF8C48569C69EEAEAFBDBEC /* Pods-ElanGridView_Example-dummy.m */,
+				D0CFA6D85023552D01991454EDBBDBAF /* Pods-ElanGridView_Example-frameworks.sh */,
+				C2BB7187AB5DE8BFF39807794200B24E /* Pods-ElanGridView_Example-resources.sh */,
+				04E04E52C6659CAD3AE38BE7109C750F /* Pods-ElanGridView_Example-umbrella.h */,
+				70503078FB4904A179A39578ADA6CDE5 /* Pods-ElanGridView_Example.debug.xcconfig */,
+				0EB161B7A3694FE811208E08F3BF927B /* Pods-ElanGridView_Example.release.xcconfig */,
+			);
+			name = "Pods-ElanGridView_Example";
+			path = "Target Support Files/Pods-ElanGridView_Example";
+			sourceTree = "<group>";
+		};
+		C2B1A851B42E8ED3B950D4C591B67F81 /* Pods-ElanGridView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B5DB33CCCD6323B7B2E85FD353013D81 /* Info.plist */,
+				146474FE66045E28E9B3C52E82E143B1 /* Pods-ElanGridView_Tests.modulemap */,
+				319E3EB7FFD462B7D84BF7B9742D7311 /* Pods-ElanGridView_Tests-acknowledgements.markdown */,
+				98028A7F540C1E0AA0726541978554B4 /* Pods-ElanGridView_Tests-acknowledgements.plist */,
+				4AFB24F16B2082A7A4DEBE140F999229 /* Pods-ElanGridView_Tests-dummy.m */,
+				7945D09863DFBA53982E88A92B755419 /* Pods-ElanGridView_Tests-frameworks.sh */,
+				DF16D1F67342A776C21D7E6BE403318A /* Pods-ElanGridView_Tests-resources.sh */,
+				01522AD5B8DC06BA095212112AD80654 /* Pods-ElanGridView_Tests-umbrella.h */,
+				067754145FAE6C9EBAFA6FE857E5F9EB /* Pods-ElanGridView_Tests.debug.xcconfig */,
+				A3751CD5B6650C2577F56A4CB401B01A /* Pods-ElanGridView_Tests.release.xcconfig */,
+			);
+			name = "Pods-ElanGridView_Tests";
+			path = "Target Support Files/Pods-ElanGridView_Tests";
+			sourceTree = "<group>";
+		};
+		C569A5215C0D5E6FE27770B659F47020 /* ElanGridView */ = {
+			isa = PBXGroup;
+			children = (
+				93CC77C949627952C0CE4D9D25E6DA08 /* ElanGridView */,
+				329340926A4F6755434E509C290E6073 /* Support Files */,
+			);
+			name = ElanGridView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DF39457BFC52582D7C2125EBE63D7D1A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BB51E027A93447764CA114265F0A9DCF /* ElanCard.swift */,
+				512C0312C869BD69FF284B157533FD10 /* ElanGridView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7FA694C1C3120F0563C04DDB3FF2E35E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771F16390513EF2A4528733779D9E91E /* Pods-ElanGridView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8379FF24177477D9542BD3AD3B411C56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39DE968ED9DF9FDB761B0284D75AA1C5 /* Pods-ElanGridView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2B2D94BA79E7C51E49D7C35B70D1B9A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9D4E5F1C378099B3C960BDAC56535D /* ElanGridView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01394C7A09CBCE2B09C9EE919BB736FE /* ElanGridView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5DAD978151313F17C5991619F0BDC06 /* Build configuration list for PBXNativeTarget "ElanGridView" */;
+			buildPhases = (
+				115F5ACC827C46F62B37005258CAA1ED /* Sources */,
+				4CD7F6FD7F81B132F41939BDCF79C448 /* Frameworks */,
+				D2B2D94BA79E7C51E49D7C35B70D1B9A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ElanGridView;
+			productName = ElanGridView;
+			productReference = 4F1E1300DF02E753362630F52972E798 /* ElanGridView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8412F1A081A09A2FA1C0C0A51FB5B292 /* Pods-ElanGridView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC64C32AEE0F95422C8C6FF370577EC5 /* Build configuration list for PBXNativeTarget "Pods-ElanGridView_Example" */;
+			buildPhases = (
+				BD8ECB61D05AE18215886C8387124401 /* Sources */,
+				E00C2795D0307BDCB71100E15F6490E0 /* Frameworks */,
+				8379FF24177477D9542BD3AD3B411C56 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D32F4134CDBB7FCF81937D31F2E05388 /* PBXTargetDependency */,
+			);
+			name = "Pods-ElanGridView_Example";
+			productName = "Pods-ElanGridView_Example";
+			productReference = 83C991C4F73FB571EAA8A8299A592291 /* Pods_ElanGridView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A5B58EF9D68BCD0367359E7C35D16C73 /* Pods-ElanGridView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF1DA6D6A307213538B6F49F554060B /* Build configuration list for PBXNativeTarget "Pods-ElanGridView_Tests" */;
+			buildPhases = (
+				828725BCA93D6ED0BEA3E0BEAC98A40E /* Sources */,
+				E34F05F3C96FC558D90E32E74026E665 /* Frameworks */,
+				7FA694C1C3120F0563C04DDB3FF2E35E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ElanGridView_Tests";
+			productName = "Pods-ElanGridView_Tests";
+			productReference = E6674CD8040D768FCB16E663B807F77D /* Pods_ElanGridView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5CA9B49C4D1B76C220414D5C3F4AD721 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01394C7A09CBCE2B09C9EE919BB736FE /* ElanGridView */,
+				8412F1A081A09A2FA1C0C0A51FB5B292 /* Pods-ElanGridView_Example */,
+				A5B58EF9D68BCD0367359E7C35D16C73 /* Pods-ElanGridView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		115F5ACC827C46F62B37005258CAA1ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377B5E4F1BE806A283C73A7BE6B446DA /* ElanCard.swift in Sources */,
+				166356865E6823CB2BA1CCE5A4AD4476 /* ElanGridView-dummy.m in Sources */,
+				E2A6795D399F275B404CDBE99787F575 /* ElanGridView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		828725BCA93D6ED0BEA3E0BEAC98A40E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06A90D4AD3C2EF638CC6B9A81BCD6D6A /* Pods-ElanGridView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD8ECB61D05AE18215886C8387124401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747D71D9B1655AC243DDF0006D4001C3 /* Pods-ElanGridView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D32F4134CDBB7FCF81937D31F2E05388 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ElanGridView;
+			target = 01394C7A09CBCE2B09C9EE919BB736FE /* ElanGridView */;
+			targetProxy = CB3ABE573D0468C31B75BDAA4E2A1983 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02D9E52A2A455A67FDBD91D1B97EFAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62D938D3883AF84BE4A0AF6CA686A09 /* ElanGridView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ElanGridView/ElanGridView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ElanGridView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ElanGridView/ElanGridView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ElanGridView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C06F49709F2DC8DD8E554E9863552F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70503078FB4904A179A39578ADA6CDE5 /* Pods-ElanGridView_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ElanGridView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ElanGridView_Example/Pods-ElanGridView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ElanGridView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		43330AEAA5E5A54B05E679D9F39ABC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62D938D3883AF84BE4A0AF6CA686A09 /* ElanGridView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ElanGridView/ElanGridView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ElanGridView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ElanGridView/ElanGridView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ElanGridView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E83A63F06D5D16255515897C2764F38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB161B7A3694FE811208E08F3BF927B /* Pods-ElanGridView_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ElanGridView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ElanGridView_Example/Pods-ElanGridView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ElanGridView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79861251CD453774B5A9BA26B294F384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3751CD5B6650C2577F56A4CB401B01A /* Pods-ElanGridView_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ElanGridView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ElanGridView_Tests/Pods-ElanGridView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ElanGridView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EFA638D2D78D0F6AA8185759226D0A26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067754145FAE6C9EBAFA6FE857E5F9EB /* Pods-ElanGridView_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ElanGridView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ElanGridView_Tests/Pods-ElanGridView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ElanGridView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5DAD978151313F17C5991619F0BDC06 /* Build configuration list for PBXNativeTarget "ElanGridView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02D9E52A2A455A67FDBD91D1B97EFAAD /* Debug */,
+				43330AEAA5E5A54B05E679D9F39ABC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC64C32AEE0F95422C8C6FF370577EC5 /* Build configuration list for PBXNativeTarget "Pods-ElanGridView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C06F49709F2DC8DD8E554E9863552F6 /* Debug */,
+				4E83A63F06D5D16255515897C2764F38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECF1DA6D6A307213538B6F49F554060B /* Build configuration list for PBXNativeTarget "Pods-ElanGridView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFA638D2D78D0F6AA8185759226D0A26 /* Debug */,
+				79861251CD453774B5A9BA26B294F384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
