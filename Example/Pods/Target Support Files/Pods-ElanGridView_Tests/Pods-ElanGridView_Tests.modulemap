@@ -1,6 +1,0 @@
-framework module Pods_ElanGridView_Tests {
-  umbrella header "Pods-ElanGridView_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
