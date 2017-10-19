@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ElanGridView'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'Simple Grid View in swift'
 
   s.description      = <<-DESC

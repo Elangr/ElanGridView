@@ -9,11 +9,10 @@ import UIKit
 
 public typealias GridViewConstructor = (_ contentView: ElanCard) -> Void
 
- @objc public protocol ElanGridViewDelegate: class{
-    @objc optional func onTapCard(_ elanCard: ElanCard)
-    @objc optional func onLongPressCard(_ elanCard: ElanCard)
-    @objc optional func selectedCards(_ selectedCards: [ElanIndex] )
-
+public protocol ElanGridViewDelegate: class{
+    func onTapCard(_ elanCard: ElanCard)
+    func onLongPressCard(_ elanCard: ElanCard)
+    func selectedCards(_ selectedCards: [ElanIndex] )
 }
 
 public class ElanGridView: UIScrollView {
@@ -141,9 +140,9 @@ public class ElanGridView: UIScrollView {
                 }else{
                     self.selectedCards =  self.selectedCards.filter { $0 != cellCard.indexPath }
                 }
-                elanGridViewDelegate?.selectedCards!(self.selectedCards)
+                elanGridViewDelegate?.selectedCards(self.selectedCards)
             }else {
-                elanGridViewDelegate?.onTapCard!(cellCard)
+                elanGridViewDelegate?.onTapCard(cellCard)
             }
             if self.selectedCards.count == 0 {
                 self.isSelectionOn = false
@@ -168,7 +167,7 @@ public class ElanGridView: UIScrollView {
                     
                 } else {
                     
-                    elanGridViewDelegate?.onLongPressCard!(cellCard)
+                    elanGridViewDelegate?.onLongPressCard(cellCard)
                     
                 }
             }
