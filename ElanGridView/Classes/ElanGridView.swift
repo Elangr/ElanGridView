@@ -18,16 +18,16 @@ public typealias GridViewConstructor = (_ contentView: ElanCard) -> Void
 
 public class ElanGridView: UIScrollView {
     
-    @IBInspectable var cellWidth: CGFloat = 0.0
-    @IBInspectable var cellHeight: CGFloat = 0.0
-    @IBInspectable var paddingLeft: CGFloat = 10.0
-    @IBInspectable var paddingRight: CGFloat = 10.0
-    @IBInspectable var paddingTop: CGFloat = 10.0
-    @IBInspectable var paddingBottom: CGFloat = 10.0
-    @IBInspectable var maxColumns: UInt = 1
+    @IBInspectable public var cellWidth: CGFloat = 0.0
+    @IBInspectable public var cellHeight: CGFloat = 0.0
+    @IBInspectable public var paddingLeft: CGFloat = 10.0
+    @IBInspectable public var paddingRight: CGFloat = 10.0
+    @IBInspectable public var paddingTop: CGFloat = 10.0
+    @IBInspectable public var paddingBottom: CGFloat = 10.0
+    @IBInspectable public var maxColumns: UInt = 1
     
-    @IBInspectable var allowsMultipleSelection: Bool = false
-    @IBInspectable var selectedColor: UIColor =  UIColor(rgb: 0x0095ff)
+    @IBInspectable public var allowsMultipleSelection: Bool = false
+    @IBInspectable public var selectedColor: UIColor =  UIColor(rgb: 0x0095ff)
     
     private var contentView: UIView? = nil
     
