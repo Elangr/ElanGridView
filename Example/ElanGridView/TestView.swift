@@ -14,5 +14,14 @@ public class TestView: UIView{
     class func instanceFromNib() -> TestView {
         return UINib(nibName: "TestView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TestView
     }
+    @IBAction func onClickTestEvent(_ sender: Any) {
+        let alertController = UIAlertController(title: "Test", message: "On tap button inside Card", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        UIApplication.shared.windows[0].rootViewController?.present(alertController, animated: false)
+
+    }
 }
 

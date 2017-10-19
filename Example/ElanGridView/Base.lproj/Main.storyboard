@@ -30,6 +30,11 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cellHeight">
                                         <real key="value" value="250"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSelectable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.42497333879999999" green="0.74777400490000001" blue="0.174695611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
