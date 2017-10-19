@@ -9,8 +9,11 @@ import UIKit
 
 public typealias GridViewConstructor = (_ contentView: ElanCard) -> Void
 
-public protocol ElanGridViewDelegate: class{
-    func onTapCard(_ elanCard: ElanCard)
+ @objc public protocol ElanGridViewDelegate: class{
+    @objc optional func onTapCard(_ elanCard: ElanCard)
+    @objc optional func onLongPressCard(_ elanCard: ElanCard)
+    @objc optional func selectedCards(_ selectedCards: [ElanIndex] )
+
 }
 
 public class ElanGridView: UIScrollView {
@@ -22,11 +25,18 @@ public class ElanGridView: UIScrollView {
     @IBInspectable var paddingTop: CGFloat = 10.0
     @IBInspectable var paddingBottom: CGFloat = 10.0
     @IBInspectable var maxColumns: UInt = 1
-        
+    
+    @IBInspectable var allowsMultipleSelection: Bool = false
+    @IBInspectable var selectedColor: UIColor =  UIColor(rgb: 0x0095ff)
+    
     private var contentView: UIView? = nil
     
     private var nextRow: Int = 0
     private var nextColumn: Int = 0
+    
+    private var isSelectionOn: Bool = false
+    
+    private var selectedCards = [ElanIndex]()
     
     public weak var elanGridViewDelegate: ElanGridViewDelegate?
     
@@ -66,12 +76,10 @@ public class ElanGridView: UIScrollView {
             height = self.cellHeight
         }
         
-       
         for cellCard: ElanCard in self.contentView?.subviews as! [ElanCard] {
             cellCard.cellSize = CGSize(width: width, height: height)
             cellCard.updateLayout()
         }
-        
         
         var contentFrame:CGRect = (self.contentView?.frame)!
         
@@ -99,12 +107,15 @@ public class ElanGridView: UIScrollView {
         cellCard.paddingLeft = self.paddingLeft
         cellCard.paddingRight = self.paddingRight
         
-        cellCard.row = UInt(self.nextRow)
-        cellCard.column = UInt(self.nextColumn)
+        cellCard.selectionColor = self.selectedColor
+        
+        cellCard.indexPath = ElanIndex(row: self.nextRow, column: self.nextColumn)
         
         //Add Tap event
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapCard(_:)))
+        let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongPressCard(_:)))
         cellCard.addGestureRecognizer(tapGesture)
+        cellCard.addGestureRecognizer(longTapGesture)
         
         constructor(cellCard)
         self.contentView?.addSubview(cellCard)
@@ -116,15 +127,52 @@ public class ElanGridView: UIScrollView {
         } else {
             self.nextColumn += 1
         }
-        
     }
     
     @objc func onTapCard(_ sender:UITapGestureRecognizer){
         
         if elanGridViewDelegate != nil {
             let cellCard = sender.view as! ElanCard
-            elanGridViewDelegate?.onTapCard(cellCard)
+            
+            if self.allowsMultipleSelection && self.isSelectionOn {
+                cellCard.updateSelectionState()
+                if cellCard.isSelected {
+                    self.selectedCards.append(cellCard.indexPath)
+                }else{
+                    self.selectedCards =  self.selectedCards.filter { $0 != cellCard.indexPath }
+                }
+                elanGridViewDelegate?.selectedCards!(self.selectedCards)
+            }else {
+                elanGridViewDelegate?.onTapCard!(cellCard)
+            }
+            if self.selectedCards.count == 0 {
+                self.isSelectionOn = false
+            }
         }
-        
+    }
+    
+    @objc func onLongPressCard(_ sender:UITapGestureRecognizer){
+        if sender.state == .ended {
+            if elanGridViewDelegate != nil {
+                let cellCard = sender.view as! ElanCard
+                
+                if self.allowsMultipleSelection  && !self.isSelectionOn {
+                    
+                    self.isSelectionOn = true
+                    
+                    self.onTapCard(sender)
+                    
+                } else if self.allowsMultipleSelection  && self.isSelectionOn {
+                    
+                    self.onTapCard(sender)
+                    
+                } else {
+                    
+                    elanGridViewDelegate?.onLongPressCard!(cellCard)
+                    
+                }
+            }
+        }
     }
 }
+
