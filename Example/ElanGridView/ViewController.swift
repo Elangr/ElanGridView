@@ -14,6 +14,19 @@ class ViewController: UIViewController, ElanGridViewDelegate {
     
     @IBOutlet weak var elanGridview: ElanGridView!
     
+    @IBAction func searchCard(_ sender: Any) {
+        let card = elanGridview.getCardById("card10")
+        if(card != nil){
+            let testView: TestView = card?.subviews[0] as! TestView
+            testView.backgroundColor = UIColor.red
+            let alertController = UIAlertController(title: "I find it ", message: "Hello this is card \ncolumn: \(String(describing: card?.indexPath.column)) \nrow :\(String(describing: card?.indexPath.row)) CardId:\(String(describing: card?.cardId))", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK",
+                                             style: .cancel, handler: nil)
+            
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: false)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         elanGridview.elanGridViewDelegate = self
@@ -22,14 +35,14 @@ class ViewController: UIViewController, ElanGridViewDelegate {
                 cellView in
                 let testView: TestView = TestView.instanceFromNib()
                 cellView.indexPath.tag = "hello \(i)"
+                cellView.cardId = "card\(i)"
                 testView.rowLabel.text = "\(cellView.indexPath.row)"
                 testView.columnLabel.text = "\(cellView.indexPath.column)"
 
                 cellView.addSubview(testView)
             }
         }
-        
-       
+   
     }
 
     func onTapCard(_ elanCard: ElanCard) {

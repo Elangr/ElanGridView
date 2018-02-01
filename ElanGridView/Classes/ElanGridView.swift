@@ -9,10 +9,11 @@ import UIKit
 
 public typealias GridViewConstructor = (_ contentView: ElanCard) -> Void
 
-public protocol ElanGridViewDelegate: class{
-    func onTapCard(_ elanCard: ElanCard)
-    func onLongPressCard(_ elanCard: ElanCard)
-    func selectedCards(_ selectedCards: [ElanIndex] )
+ @objc public protocol ElanGridViewDelegate: class{
+    @objc optional func onTapCard(_ elanCard: ElanCard)
+    @objc optional func onLongPressCard(_ elanCard: ElanCard)
+    @objc optional func selectedCards(_ selectedCards: [ElanIndex] )
+
 }
 
 public class ElanGridView: UIScrollView {
@@ -96,6 +97,17 @@ public class ElanGridView: UIScrollView {
         self.contentSize = contentFrame.size
     }
     
+    public func getCardById(_ cardId: String) -> ElanCard!{
+        for cellCard: UIView in (self.contentView?.subviews)! {
+            if(cellCard.isKind(of: ElanCard.self)){
+                let currentCardId = (cellCard as! ElanCard).cardId
+                if (currentCardId == cardId){
+                    return cellCard as! ElanCard
+                }
+            }
+        }
+        return nil
+    }
     
     public func addCell(constructor: GridViewConstructor){
         
@@ -109,7 +121,7 @@ public class ElanGridView: UIScrollView {
         cellCard.selectionColor = self.selectedColor
         
         cellCard.indexPath = ElanIndex(row: self.nextRow, column: self.nextColumn)
-        
+        cellCard.cardId = "\(self.nextRow)-\(self.nextColumn)"
         //Add Tap event
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapCard(_:)))
         let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongPressCard(_:)))
@@ -140,9 +152,14 @@ public class ElanGridView: UIScrollView {
                 }else{
                     self.selectedCards =  self.selectedCards.filter { $0 != cellCard.indexPath }
                 }
-                elanGridViewDelegate?.selectedCards(self.selectedCards)
+                if let slectedCardsMethod = elanGridViewDelegate?.selectedCards {
+                    slectedCardsMethod(self.selectedCards)
+                }
+               
             }else {
-                elanGridViewDelegate?.onTapCard(cellCard)
+                if let tapCardMethod = elanGridViewDelegate?.onTapCard {
+                    tapCardMethod(cellCard)
+                }
             }
             if self.selectedCards.count == 0 {
                 self.isSelectionOn = false
@@ -166,8 +183,9 @@ public class ElanGridView: UIScrollView {
                     self.onTapCard(sender)
                     
                 } else {
-                    
-                    elanGridViewDelegate?.onLongPressCard(cellCard)
+                    if let longPressMethod = elanGridViewDelegate?.onLongPressCard {
+                        longPressMethod(cellCard)
+                    }
                     
                 }
             }

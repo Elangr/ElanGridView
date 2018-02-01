@@ -28,7 +28,7 @@ public class ElanCard: UIView {
     public var isSelected: Bool = false
     
     public var selectionColor: UIColor =  UIColor(rgb: 0x0095ff)
-    
+    public var cardId: String!
     private var selectedView: UIView? = nil
     private var cardSize = CGSize.zero
     
@@ -108,8 +108,10 @@ public class ElanCard: UIView {
         var currentFrame: CGRect = CGRect(origin: CGPoint.zero, size: self.cardSize)
         currentFrame.origin.x = self.paddingLeft + CGFloat(self.indexPath.column) + (CGFloat(self.indexPath.column) * (self.cellSize.width - 1)) + 1
         currentFrame.origin.y = self.paddingTop + CGFloat(self.indexPath.row) + (CGFloat(self.indexPath.row) * (self.cellSize.height - 1)) + 1
-
-        self.frame = currentFrame
+        UIView.animate(withDuration: 0.4) {
+            self.frame = currentFrame
+            self.layer.frame = currentFrame
+        }
     }
 }
 
