@@ -27,9 +27,11 @@ class ViewController: UIViewController, ElanGridViewDelegate {
             self.present(alertController, animated: false)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         elanGridview.elanGridViewDelegate = self
+        
         for i in (0..<40){
             elanGridview.addCell(){
                 cellView in
