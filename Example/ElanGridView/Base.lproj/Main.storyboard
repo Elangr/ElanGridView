@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-rr-FOk" customClass="ElanGridView" customModule="ElanGridView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxColumns">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cellHeight">
                                         <real key="value" value="250"/>
@@ -34,16 +34,36 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
                                         <color key="value" red="0.42497333879999999" green="0.74777400490000001" blue="0.174695611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dZ-uI-MQj">
+                                <rect key="frame" x="0.0" y="594" width="375" height="73"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-GP-jS2">
+                                        <rect key="frame" x="22" y="21" width="115" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Find card card10"/>
+                                        <connections>
+                                            <action selector="searchCard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ohZ-UT-CIy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="x2O-Oe-PRU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bE9-rr-FOk" secondAttribute="trailing" id="Akl-04-A5R"/>
                             <constraint firstItem="bE9-rr-FOk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Az6-yo-He0"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bE9-rr-FOk" secondAttribute="bottom" id="CI2-t1-y6Q"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2dZ-uI-MQj" secondAttribute="bottom" id="Dwd-Go-NQA"/>
                             <constraint firstItem="bE9-rr-FOk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ITh-Tl-x7s"/>
+                            <constraint firstItem="2dZ-uI-MQj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Ird-5m-hci"/>
+                            <constraint firstItem="2dZ-uI-MQj" firstAttribute="top" secondItem="bE9-rr-FOk" secondAttribute="bottom" id="XCp-kJ-vgk"/>
+                            <constraint firstAttribute="trailing" secondItem="2dZ-uI-MQj" secondAttribute="trailing" id="ut4-Lv-xl9"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>

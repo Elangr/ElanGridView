@@ -10,27 +10,23 @@ import UIKit
 public class ElanCard: UIView {
     
     public var cornerRadius: CGFloat = 2
-    
     public var shadowOffsetWidth: Int = 0
     public var shadowOffsetHeight: Int = 2
     public var shadowColor: UIColor? = .black
     public var shadowOpacity: Float = 0.4
-    
     public var indexPath: ElanIndex = .zero
-    
     public var cellSize: CGSize = .zero
-    
     public var paddingLeft: CGFloat = 0.0
     public var paddingRight: CGFloat = 0.0
     public var paddingTop: CGFloat = 0.0
     public var paddingBottom: CGFloat = 0.0
-    
     public var isSelected: Bool = false
-    
     public var selectionColor: UIColor =  UIColor(rgb: 0x0095ff)
+    public var cardId: String!
     
     private var selectedView: UIView? = nil
     private var cardSize = CGSize.zero
+    private var firstTime = true
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,6 +48,7 @@ public class ElanCard: UIView {
         self.selectedView?.layer.cornerRadius = cornerRadius
     }
     
+    /// update cell selection state
     public func updateSelectionState(){
         self.isSelected = !self.isSelected
         if self.selectedView != nil {
@@ -102,14 +99,23 @@ public class ElanCard: UIView {
 
     }
     
+    /// update card layout (recalculate size and position)
     public func updateLayout(){
         self.cardSize.width = self.cellSize.width - (self.paddingLeft + self.paddingRight)
         self.cardSize.height = self.cellSize.height - (self.paddingTop + self.paddingBottom)
         var currentFrame: CGRect = CGRect(origin: CGPoint.zero, size: self.cardSize)
         currentFrame.origin.x = self.paddingLeft + CGFloat(self.indexPath.column) + (CGFloat(self.indexPath.column) * (self.cellSize.width - 1)) + 1
         currentFrame.origin.y = self.paddingTop + CGFloat(self.indexPath.row) + (CGFloat(self.indexPath.row) * (self.cellSize.height - 1)) + 1
-
-        self.frame = currentFrame
+        if(firstTime ){
+            self.frame = currentFrame
+            self.layer.frame = currentFrame
+            firstTime = false
+        }else{
+            UIView.animate(withDuration: 0.4) {
+                self.frame = currentFrame
+                self.layer.frame = currentFrame
+            }
+        }
     }
 }
 

@@ -7,12 +7,13 @@
 
 import UIKit
 
-public typealias GridViewConstructor = (_ contentView: ElanCard) -> Void
+public typealias NewElanCardConstructor = (_ card: ElanCard) -> Void
 
-public protocol ElanGridViewDelegate: class{
-    func onTapCard(_ elanCard: ElanCard)
-    func onLongPressCard(_ elanCard: ElanCard)
-    func selectedCards(_ selectedCards: [ElanIndex] )
+/// ElangGridView Event Delegate
+ @objc public protocol ElanGridViewDelegate: class{
+    @objc optional func onTapCard(_ elanCard: ElanCard)
+    @objc optional func onLongPressCard(_ elanCard: ElanCard)
+    @objc optional func selectedCards(_ selectedCards: [ElanIndex] )
 }
 
 public class ElanGridView: UIScrollView {
@@ -24,20 +25,17 @@ public class ElanGridView: UIScrollView {
     @IBInspectable public var paddingTop: CGFloat = 10.0
     @IBInspectable public var paddingBottom: CGFloat = 10.0
     @IBInspectable public var maxColumns: UInt = 1
-    
     @IBInspectable public var allowsMultipleSelection: Bool = false
     @IBInspectable public var selectedColor: UIColor =  UIColor(rgb: 0x0095ff)
     
+    public weak var elanGridViewDelegate: ElanGridViewDelegate?
+
     private var contentView: UIView? = nil
-    
     private var nextRow: Int = 0
     private var nextColumn: Int = 0
-    
     private var isSelectionOn: Bool = false
-    
     private var selectedCards = [ElanIndex]()
     
-    public weak var elanGridViewDelegate: ElanGridViewDelegate?
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -75,6 +73,7 @@ public class ElanGridView: UIScrollView {
             height = self.cellHeight
         }
         
+        // update cell layout
         for cellCard: ElanCard in self.contentView?.subviews as! [ElanCard] {
             cellCard.cellSize = CGSize(width: width, height: height)
             cellCard.updateLayout()
@@ -89,15 +88,29 @@ public class ElanGridView: UIScrollView {
         }
         
         contentFrame.size.height = height * CGFloat(self.nextRow)
-        self.contentView?.frame = contentFrame
-        self.contentSize = contentFrame.size
-        
+       
         self.contentView?.frame = contentFrame
         self.contentSize = contentFrame.size
     }
     
+    /// Find card by id
+    /// - parameter cardId: The card id to find
+    /// - returns: ElanCard instance otherwise nil if the card is not found 
+    public func getCardById(_ cardId: String) -> ElanCard!{
+        for cellCard: UIView in (self.contentView?.subviews)! {
+            if(cellCard.isKind(of: ElanCard.self)){
+                let currentCardId = (cellCard as! ElanCard).cardId
+                if (currentCardId == cardId){
+                    return cellCard as! ElanCard
+                }
+            }
+        }
+        return nil
+    }
     
-    public func addCell(constructor: GridViewConstructor){
+    /// Create a new Card
+     /// - parameter newElanCardConstructor: A closure which is called with newElanCardConstructor, an instance of ElanCard
+    public func addCell(newElanCardConstructor: NewElanCardConstructor){
         
         let cellCard = ElanCard()
        
@@ -109,65 +122,76 @@ public class ElanGridView: UIScrollView {
         cellCard.selectionColor = self.selectedColor
         
         cellCard.indexPath = ElanIndex(row: self.nextRow, column: self.nextColumn)
+        cellCard.cardId = "\(self.nextRow)-\(self.nextColumn)"
         
         //Add Tap event
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapCard(_:)))
+       //Add Long tap event
         let longTapGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongPressCard(_:)))
+        
         cellCard.addGestureRecognizer(tapGesture)
         cellCard.addGestureRecognizer(longTapGesture)
         
-        constructor(cellCard)
         self.contentView?.addSubview(cellCard)
         self.setNeedsLayout()
         
+        //Update nextColumn and nextRow indexes
         if self.maxColumns == (self.nextColumn + 1) {
             self.nextColumn = 0
             self.nextRow += 1
         } else {
             self.nextColumn += 1
         }
+        
+        newElanCardConstructor(cellCard)
     }
     
+    // Single Tap event
     @objc func onTapCard(_ sender:UITapGestureRecognizer){
         
         if elanGridViewDelegate != nil {
             let cellCard = sender.view as! ElanCard
             
-            if self.allowsMultipleSelection && self.isSelectionOn {
+            if (self.allowsMultipleSelection && self.isSelectionOn) {
                 cellCard.updateSelectionState()
-                if cellCard.isSelected {
+                
+                if (cellCard.isSelected) {
                     self.selectedCards.append(cellCard.indexPath)
                 }else{
                     self.selectedCards =  self.selectedCards.filter { $0 != cellCard.indexPath }
                 }
-                elanGridViewDelegate?.selectedCards(self.selectedCards)
-            }else {
-                elanGridViewDelegate?.onTapCard(cellCard)
+                
+                if let slectedCardsMethod = elanGridViewDelegate?.selectedCards {
+                    slectedCardsMethod(self.selectedCards)
+                }
+            } else {
+                if let tapCardMethod = elanGridViewDelegate?.onTapCard {
+                    tapCardMethod(cellCard)
+                }
             }
+            
             if self.selectedCards.count == 0 {
                 self.isSelectionOn = false
             }
         }
     }
     
+    // Long press event
     @objc func onLongPressCard(_ sender:UITapGestureRecognizer){
-        if sender.state == .ended {
-            if elanGridViewDelegate != nil {
+        if (sender.state == .ended) {
+            if (elanGridViewDelegate != nil) {
                 let cellCard = sender.view as! ElanCard
                 
-                if self.allowsMultipleSelection  && !self.isSelectionOn {
-                    
+                if (self.allowsMultipleSelection  && !self.isSelectionOn) {
                     self.isSelectionOn = true
-                    
                     self.onTapCard(sender)
-                    
-                } else if self.allowsMultipleSelection  && self.isSelectionOn {
-                    
+                } else if (self.allowsMultipleSelection  && self.isSelectionOn) {
                     self.onTapCard(sender)
-                    
                 } else {
                     
-                    elanGridViewDelegate?.onLongPressCard(cellCard)
+                    if let longPressMethod = elanGridViewDelegate?.onLongPressCard {
+                        longPressMethod(cellCard)
+                    }
                     
                 }
             }

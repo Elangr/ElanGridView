@@ -29,7 +29,7 @@ public class ElanIndex: NSObject {
     }
     
     public override var description: String{
-        return " {row: \(self.row), column: \(self.column), id: \(self.tag)}"
+        return " {row: \(self.row), column: \(self.column), id: \(String(describing: self.tag))}"
     }
 }
 

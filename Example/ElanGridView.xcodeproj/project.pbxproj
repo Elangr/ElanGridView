@@ -223,12 +223,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = KJQQSN3LGU;
+						DevelopmentTeam = SL536235U9;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = KJQQSN3LGU;
+						DevelopmentTeam = SL536235U9;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -531,7 +531,7 @@
 			baseConfigurationReference = 5506AB7275A3AE647422F734 /* Pods-ElanGridView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KJQQSN3LGU;
+				DEVELOPMENT_TEAM = SL536235U9;
 				INFOPLIST_FILE = ElanGridView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -547,7 +547,7 @@
 			baseConfigurationReference = 9BA331E1D7D83AC169857297 /* Pods-ElanGridView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KJQQSN3LGU;
+				DEVELOPMENT_TEAM = SL536235U9;
 				INFOPLIST_FILE = ElanGridView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -562,7 +562,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5BE52E103C6615763F265F28 /* Pods-ElanGridView_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = KJQQSN3LGU;
+				DEVELOPMENT_TEAM = SL536235U9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -584,7 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FD93ABCED5F591948633600 /* Pods-ElanGridView_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = KJQQSN3LGU;
+				DEVELOPMENT_TEAM = SL536235U9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
