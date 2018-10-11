@@ -101,7 +101,7 @@ public class ElanGridView: UIScrollView {
             if(cellCard.isKind(of: ElanCard.self)){
                 let currentCardId = (cellCard as! ElanCard).cardId
                 if (currentCardId == cardId){
-                    return cellCard as! ElanCard
+                    return cellCard as? ElanCard
                 }
             }
         }

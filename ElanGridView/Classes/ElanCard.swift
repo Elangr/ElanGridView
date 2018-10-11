@@ -81,7 +81,7 @@ public class ElanCard: UIView {
         super.addSubview(view)
         
         if self.selectedView != nil {
-            self.bringSubview(toFront: self.selectedView!)
+            self.bringSubviewToFront(self.selectedView!)
         }
         
         view.translatesAutoresizingMaskIntoConstraints = false
