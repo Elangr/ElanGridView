@@ -52,7 +52,7 @@
 		9BA331E1D7D83AC169857297 /* Pods-ElanGridView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElanGridView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElanGridView_Example/Pods-ElanGridView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B0E0B249F794A08730CED2B1 /* Pods_ElanGridView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElanGridView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB665867CA38C030B64071A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		EBC7EA310A7ACEEB0B7559EF /* ElanGridView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ElanGridView.podspec; path = ../ElanGridView.podspec; sourceTree = "<group>"; };
+		EBC7EA310A7ACEEB0B7559EF /* ElanGridView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ElanGridView.podspec; path = ../ElanGridView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
